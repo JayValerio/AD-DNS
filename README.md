@@ -6,15 +6,11 @@
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
-<h2>Video Demonstration</h2>
-
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- PowerShell
 - Active Directory
 
 <h2>Operating Systems Used </h2>
@@ -23,11 +19,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows 10 (21H2)
 <h2>Objectives </h2>
 
-- Install Active Directory
-- Create a Domain Admin user within the domain
-- Join Client-1 to your domain (mydomain.com)
-- Setup Remote Desktop for non-administrative users on Client-1
-- Create additional users and attempt to log into client-1 with one of the users
+- Observe DNS addressing and functions.
 
 <h2>Install Active Directory</h2>
 
