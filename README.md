@@ -76,8 +76,14 @@ An A-record (Address Record) maps a domain name to its corresponding IPv4 addres
   ![image](https://github.com/user-attachments/assets/0e66a074-b99e-44f9-ac66-77504afde86d)
 
 </p>
+<p>
+  Now we can 'ping mainframe' in client-1 and it will show the ping from the IP Address for DC-1.
+</p>
+<p>
 
+  ![image](https://github.com/user-attachments/assets/f3115cbd-1d9e-49ae-8071-434c43c05eaa)
 
+</p>
 
 
 
