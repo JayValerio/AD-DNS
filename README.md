@@ -60,10 +60,22 @@ An A-record (Address Record) maps a domain name to its corresponding IPv4 addres
   ![image](https://github.com/user-attachments/assets/cd41fa2c-04bc-4902-b7da-0b172744a45b)
 
 </p>
+<p>
+  Now lets create an A-record with the hostname "mainframe", this A record will point towards our DC-1 IP Address. In this example that would be 10.1.0.4
+</p>
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/11a7ae04-0ef3-4df7-8707-f2debf6c4683)
 
+</p>
+<p>
+  Right click 'alphadomain.com' then select 'New Host(A or AAA)...' and add the A-record 'mainframe' with the IP Address '10.1.0.4'. Adding a Pointer Record allows us to reverse look up this A-record.
+</p>
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/0e66a074-b99e-44f9-ac66-77504afde86d)
 
-
-
+</p>
 
 
 
