@@ -32,7 +32,7 @@ An A-record (Address Record) maps a domain name to its corresponding IPv4 addres
   ![image](https://github.com/user-attachments/assets/a8fc2436-86ce-42c8-91bd-86bf2a405b9c)
 </p>
 <p>
-  Now on our Domain Controller lets open up powershell and "ping mainframe", notice how the request cannot be found.
+  Now on our Client-1 VM lets open up powershell and "ping mainframe", notice how the request cannot be found.
 </p>
 <p>
   
@@ -41,7 +41,7 @@ An A-record (Address Record) maps a domain name to its corresponding IPv4 addres
 </p>
 
 <p>
-  now lets also "nslookup mainframe" and notice how this also fails.
+  now lets "nslookup mainframe" and notice how this also fails.
 </p>
 
 <p>
@@ -50,10 +50,10 @@ An A-record (Address Record) maps a domain name to its corresponding IPv4 addres
 
 </p>
 <p>
-  Now that we have established that 'mainframe' does not exist on our Domain Controller we will make an "A-Record" and have mainframe point to our DC IP address.
+  Now that we have established that 'mainframe' does not point towards any IP address on our VNET, we will make an "A-Record" and have 'mainframe' point to our VM machine, DC-1's, IP address.
 </p>
 <p>
-  On our DNS server, open 'administrative tools' and find 'DNS'. Here we open the dropdown for 'DC-1' and 'alphadomain.com'. Here we will see the different A-Records recorded in the cache.
+  On our DC-1 VM, open windows 'administrative tools' and find 'DNS'. Here we open the dropdown for 'DC-1' and 'alphadomain.com'. Here we will see the different A-Records recorded in the cache.
 </p>
 <p>
 
