@@ -84,8 +84,58 @@ An A-record (Address Record) maps a domain name to its corresponding IPv4 addres
   ![image](https://github.com/user-attachments/assets/f3115cbd-1d9e-49ae-8071-434c43c05eaa)
 
 </p>
+<p>
+  The A-Record for mainframe can be changed to point towards any IP Address we choose, We can change it to google.com IP Address with a couple of extra steps. Lets go back into DC-1 DNS Manager, change 'mainframe' IP Address to '8.8.8.8', This is google.com's IP Address.
+  
+</p>
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/59a6c802-2e28-468c-a0a1-8f1c620451df)
+
+</p>
+<p>
+  Now lets go into Client-1 and observe the changes.
+</p>
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/0ba13cbc-7216-48d5-a878-205f8032c77c)
 
 
+</p>
+<p>
+  You'll notice the IP Address has not changed and that is because when DNS tries to resolve the host name it checks the 'cache' first then 'Local Host File' then it will check the DNS Server for the IP Address. Since mainframe was already in the 'cache' as 10.1.0.4 that is what we are seeing in powershell. To fix this issue we simply push the command 'ipconfig /flushdns' and this will flush the cache. Note that this can only be done if you are running powershell as an administrator.
+</p>
+<p>
+
+  ![image](https://github.com/user-attachments/assets/bdaa0c75-2747-4e7d-83e8-1de27f6bb1ef)
+
+</p>
+<p>
+  Now that we have flushed the cache, lets ping mainframe again and observe those changes.
+</p>
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/3a1de6a3-795d-4e4b-942c-37c492510862)
+
+</p>
+<p>
+  Another tool in DNS is CNAME, A CNAME record (Canonical Name record) maps one domain name to another, allowing multiple domains to point to the same server or service.
+</p>
+<p>
+  Lets go back to DC-1 DNS Manager, right click 'alphadomain.com' and select 'New Alias (CNAME)...'. Lets name this 'Cash' and map it to 'google.com'
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/47723204-744d-4e53-9dfe-1fda3fd1d9be)
+
+</p>
+<p>
+  Back in client-1 lets ping Cash and observe as it points towards google.com.
+</p>
+<p>
+  
+  ![image](https://github.com/user-attachments/assets/d16cb454-c59f-4b77-98e4-d29725b9de1a)
+
+</p>
 
 
 
