@@ -22,8 +22,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Observe DNS addressing and functions.
 
 <h2>A-Record</h2>
-
 <p>
+  DNS is a hierarchical naming system that translates human-readable domain names (like example.com) into IP addresses (like 192.0.2.1) used by computers to identify each other on a network. It enables users to access websites using easy-to-remember names instead of numerical IP addresses, acting as the "phonebook" of the internet.
+</p>
 An A-record (Address Record) maps a domain name to its corresponding IPv4 address, allowing browsers to find and connect to the correct server. Lets log into our Azure machines and look at how it works.
 </p>
 
